@@ -41,7 +41,7 @@ function App() {
   return (
     <div className={'wrapper'} onClick={() => setAsideShow(false)}>
      <Aside onClose={setAsideShow} show={asideShow}/>
-      <div className='max-w-[1135px] w-full mx-auto md:rounded-[15px] md:shadow bg-white md:overflow-x-hidden md:overflow-y-scroll md:h-[590px] md:mt-[53px] py-[15px] px-[29px] md:mr-[100px]'>
+      <div className=' w-full mx-auto md:rounded-[15px] md:shadow bg-white md:overflow-x-hidden md:overflow-y-scroll md:h-[590px] md:mt-[53px] py-[15px] px-[29px] md:mr-[100px]'>
         <div className="flex items-center flex-col gap-[15px] md:gap-0 md:flex-row justify-around">
           <div className={'text-[26px] font-semibold mr-auto flex gap-[13px]'}>
             <img onClick={(event) => {

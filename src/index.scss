@@ -24,7 +24,7 @@ body {
 .wrapper {
   position: relative;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 100px min(1140px, 100%);
   height: 100vh;
   background-color: #EBEBF0;
   gap: 100px;
