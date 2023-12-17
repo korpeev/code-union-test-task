@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: black;
+  background-color: #EBEBF0;
+  @media screen and (max-width: 768px) {
+    background: white;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  height: 100vh;
+  background-color: #EBEBF0;
+  gap: 100px;
+  transition: grid-template-columns .3s ease;
+  $root: &;
+
+  aside:hover {
+    overflow: hidden;
+    #{$root} {
+      grid-template-columns: 232px 1fr;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    background: white;
+  }
+}
+
+.full-width {
+  width: calc(100% + 60px);
+  margin-left: -30px;
+}
+
+.modal {
+  position: absolute;
+  inset: 0;
+  z-index: 99;
+  &-backdrop {
+    background: rgba(#000, 0.5);
+  }
+  &-wrapper {
+
+  }
+}
+.modal-backdrop {
+  background-color: rgba(0,0,0, 0.6);
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+.modal-wrapper {
+  padding: 26px 20px;
+  background-color: white;
+  width: 526px;
+  border-radius: 25px;
+  box-shadow: inset;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
