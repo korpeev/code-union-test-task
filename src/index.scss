@@ -54,27 +54,27 @@ body {
   z-index: 99;
   &-backdrop {
     background: rgba(#000, 0.5);
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
   }
   &-wrapper {
-
+    padding: 26px 20px;
+    background-color: white;
+    width: 526px;
+    border-radius: 25px;
+    box-shadow: inset;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-}
-.modal-backdrop {
-  background-color: rgba(0,0,0, 0.6);
-  position: absolute;
-  inset: 0;
-  cursor: pointer;
-}
-.modal-wrapper {
-  padding: 26px 20px;
-  background-color: white;
-  width: 526px;
-  border-radius: 25px;
-  box-shadow: inset;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @media screen and (max-width: 768px){
+   &-wrapper {
+     width: calc(100% - 32px);
+     border-radius: 10px;
+   }
+  }
 }
 
 
